@@ -1,2 +1,23 @@
-# tradeweb
-help your tradeing journey
+# TradingWeb 学习台
+
+TradingWeb 里的学习子站，分三块：
+
+1. **ETF 学习**：输入代码，查看成分公司的权重、持股数量和行业板块。
+2. **个股研究**：美股 GICS 十一个板块，每个板块放两三家龙头。研究框架留空，等具体框架再写。
+3. **大盘研究**：美股主要指数和十一只板块 ETF 的走势。
+
+## 数据
+
+- 完整持仓优先取发行方公开文件：State Street（SPDR）每日持仓、iShares 持仓 CSV、Vanguard 持仓接口。
+- 发行方清单暂时取不到时，展示雅虎财经的前十大持仓，并标明这不是全部。板块条仍使用整只基金的行业配置。
+- 行业对照表来自 iShares 的美股宽基持仓，以及标普 500 的细分行业。文件在 `data/us-sector-map.json`。
+- 行情来自雅虎财经，会有延迟。
+
+## 本地运行
+
+```bash
+npm install
+npm run dev
+```
+
+打开 `/` 进入学习台，`/etf`、`/stocks`、`/market` 是三个分区。
